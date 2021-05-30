@@ -5,6 +5,11 @@ import for_img from '../../assets/images/forward_thinking.jpg';
 import nza_back from '../../assets/images/nza_background.jpg';
 import {Link} from 'react-router-dom';
 import man_thinking from '../../assets/images/man_thinking.jpg'
+import attorney from '../../assets/images/sub1.jpg'
+import business from '../../assets/images/sub-02-business.jpg'
+import litigation from '../../assets/images/sub-02-litigation.jpg'
+import subrogation from '../../assets/images/sub-02-subrogation.jpg'
+import warehouse from '../../assets/images/sub-02-warehouse.jpg'
 
 
 const useStyles = makeStyles({
@@ -14,7 +19,8 @@ const useStyles = makeStyles({
         alignContent: 'inherit',
         alignItems: 'inherit',
         width: '100%',
-        height:"100%" 
+        height:"100%" ,
+        fontfamily: "'Lucida Sans reg', sans-serif"
     },
     
     id_img: {
@@ -73,7 +79,7 @@ const useStyles = makeStyles({
 
     c_sidenav:{
         width: '230px',
-        height: '348px',
+        height: '500px',
         marginTop:'1%',
         marginLeft:'3%',
         float:'left',
@@ -329,6 +335,29 @@ const useStyles = makeStyles({
     test:{
         display:'flex'
     },
+    box1: {
+        height: '100%',
+        listStyle: 'none',
+        padding: '2rem',
+        color: 'var(--light)',
+        textDecoration: 'none',
+        textAlign: 'left',
+        gridRow: '1/4'
+        //background: url("img/nav_side_sub.jpg");
+    },
+    img_attorney:{
+        width: '100%',
+        height: '100%'
+    },
+    box3:{
+        padding: '10px',
+        display: 'grid',
+        gridGap:'10px',
+        gridTemplateColumns: '1fr 1fr',
+        gridcolumn: '2/2',
+        paddingBottom:'63px'
+        
+    }
 
 
 });
@@ -339,7 +368,7 @@ interface Props{
     title: string;
 }
 
-export const WhereWeWork = ( props:Props) => {
+export const WhatWeDo = ( props:Props) => {
     const classes = useStyles();
     return (
         <div>
@@ -380,112 +409,62 @@ export const WhereWeWork = ( props:Props) => {
                             <nav className={classes.c_sidenav}>
                                 
                                 <div className={classes.c_sidenav_content}>
-                                    <div style={{ borderBottom: '1px solid white', paddingTop:'5%' }} className={classes.career_text}>
-                                        <h3>WHERE WE WORK</h3>
-                                    </div>
-                                    <div className={classes.career_text}>
-                                        <h4>United States</h4>
-                                    </div>
-                                    <div className={classes.career_text}>
-                                        <h4>International</h4>
-                                    </div>
+                                    <div className={classes.box1}>
+                                <h3>WHAT WE DO</h3> 
+                                    <h4 style={{fontWeight: 'bold' }}>Subrogation
+                                    </h4>
+                                        <li> Property</li>
+                                        <li> Worker's Comp</li>
+                                    <h4 style={{fontWeight: 'bold' }}>Litigation </h4>
+                                            <li>Appeliate</li>
+                                            <li>Commercial</li>
+                                            <li>Defense</li>
+                                            <li>Labor/Employment</li>
                                     
-                                    <div>
-                                        <img className={classes.side_img} src={man_thinking} alt="man sitting at desk"/>
-                                    </div>
+                                    <h4 style={{fontWeight: 'bold' }} >Business</h4>
+                                            <li>Brokerage Agreement</li>
+                                            <li>Business Formation </li>
+                                            <li> Business Related</li>
+                                                <li>Contracts</li>
+                                                    <li> Property</li>
+                                                        <li> Labor/Employment</li>
+                                    
+                                    <h4 style={{fontWeight: 'bold' }}>Transportation</h4>
+                                        <li>Brokerage Agreement</li>
+                                        <li> Business Formation</li>
+                                    
 
-                                    <div className={classes.career_text}>
-                                        <h4>Career Opportunities</h4>
-                                    </div>
-                                    <div className={classes.career_text}>
-                                        <h4>Join our magnificent firm.</h4>
-                                    </div>  
-                                </div>    
+                                    <img className={classes.img_attorney} src={attorney} alt="law firm logo"/>
+
+                                    <h4 style={{fontWeight: 'bold' }}>Attorneys</h4>
+                                        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li> 
+                                                    </div>   
+                                </div> 
                             </nav>
                             <div className={classes.location_text}>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ornare pretium nulla, 
-                                    at rutrum urna consectetur sed. Cras ultricies efficitur magna, eu congue urna sodales 
-                                    eget. Aenean id purus quis enim scelerisque tempus id a metus. Nunc vitae luctus leo. 
-                                    Morbi eget malesuada purus. Nam a faucibus massa, et blandit leo. Etiam rutrum ante mi, 
-                                    vel mattis justo dignissim vel. Curabitur nisi magna, finibus in vehicula et, malesuada 
-                                    facilisis tellus. Suspendisse imperdiet non nulla sit.  
+                                <p style={{fontSize: '20px' }}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta iusto consequatur 
+                                    aut natus earum dolorem tenetur hic sunt eum facilis cupiditate cumque, ducimus ea
+                                     laudantium! Dolorem in itaque rem omnis doloribus maxime, modi similique quod impedit
+                                      excepturi ullam animi! Commodi aut consectetur vel. Pariatur soluta eveniet officia
+                                       sunt dicta aut dignissimos eius assumenda, similique incidunt. Consequuntur hic 
+                                       totam libero, ratione fuga, non similique voluptatibus, iste et accusamus adipisci 
+                                       odit corporis inventore fugiat nihil nulla eaque. Nisi nobis eum dolores nulla, 
+                                       explicabo velit aperiam possimus, laborum molestiae consectetur architecto soluta 
+                                       perferendis minima accusantium fuga. Consectetur quaerat culpa quasi alias maxime 
+                                       dolores? 
                                 </p>
                                 
                             </div>
-                            <div className={classes.test}>
-
+                            <div className={classes.box3}>
+                                <img src= {business}/>
+                                <img src= {litigation}/>
+                                <img src= {subrogation}/>
+                                <img src= {warehouse}/>
                             
-                            <div className={classes.location_headings}>
-
-                                <p>United States </p> 
-                            </div>
-                            <div className={classes.location_headings2}>
-                                    <p>International</p>
-                            </div>
-                                
-                            {/* <div id="location-grid" className={classes.location_grid}></div>
-                            </div>
-                             */}
                             </div>
                                 
                                 
                             
-                            <div  className={classes.states_grid}>
-                             
-                                <p>State</p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p>Canada</p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p>Columbia</p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p>Germany</p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p>Nicaragua</p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p></p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p></p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p></p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p></p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p></p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p></p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p></p>
-                                <p></p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p></p>
-                                <p></p>
-                                <p>State</p>
-                                <p>State</p>
-                                
-
-                    </div>
                     </div>
 
                         

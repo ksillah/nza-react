@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { WhoWeAre, WhereWeWork } from './components'; //NEW_ADDITION
+import { WhoWeAre, WhereWeWork, WhatWeDo, ContactUS} from './components'; //NEW_ADDITION
 import reportWebVitals from './reportWebVitals';
 
 import './styles.css'
@@ -13,7 +13,11 @@ ReactDOM.render(
         <Route exact path='/'>
           <WhoWeAre title={'NZA'}/> {/* NEW_ADDITION*/}
         </Route>
-        <Route path='/wherewework' component={WhereWeWork}/>
+        <Route exact path='/wherewework' component={WhereWeWork}/>
+        <Route exact path='/whatwedo' component={WhatWeDo}/>
+        <Route exact path='/contact' component={ContactUS}/>
+
+
       </Switch>
     </Router>
     

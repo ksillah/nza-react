@@ -5,6 +5,10 @@ import for_img from '../../assets/images/forward_thinking.jpg';
 import nza_back from '../../assets/images/nza_background.jpg';
 import {Link} from 'react-router-dom';
 import man_thinking from '../../assets/images/man_thinking.jpg'
+import paper from '../../assets/images/content-navlink-news.jpg'
+import contact_pic from '../../assets/images/content-05-contact.jpg'
+import contact_where from '../../assets/images/content-link-where.jpg'
+import group from '../../assets/images/content-link-reputation.jpg'
 
 
 const useStyles = makeStyles({
@@ -14,7 +18,8 @@ const useStyles = makeStyles({
         alignContent: 'inherit',
         alignItems: 'inherit',
         width: '100%',
-        height:"100%" 
+        height:"100%" ,
+        fontfamily: "'Lucida Sans reg', sans-serif"
     },
     
     id_img: {
@@ -81,6 +86,7 @@ const useStyles = makeStyles({
         overflowX: 'hidden',
         color:'white'
     },
+    
     
     h3:{
         textalign: 'center',/*changed from left*/
@@ -194,6 +200,7 @@ const useStyles = makeStyles({
         width: '93%',
         textAlign: 'center',
         marginLeft:'3%',
+        marginTop:'16%'
         
         
     },
@@ -327,7 +334,37 @@ const useStyles = makeStyles({
         
     },
     test:{
-        display:'flex'
+        display:'flex',
+        marginRight:'50px'
+    },
+
+    contact_img :{
+        width: '120%',
+        marginLeft: '7%',
+        marginTop: '5%',
+        marginRight: '5%',
+    },
+    c_sidenav2:{
+        width: '230px',
+        height: '348px',
+        marginTop:'1%',
+        float:'right',
+        background: 'linear-gradient(to bottom, #e0d1d1 0%, #e0d1d1 100%)',
+        overflowX: 'hidden',
+        color:'#AD0000',
+        marginBottom:'4px',
+        marginLeft:'130px'
+    },
+    map_img :{
+        height: '30%',
+        width:'90%',
+        marginLeft: '5%',
+        marginTop: '5%'
+    },
+    c_sidenav_content2: {
+        display: 'block',
+        marginLeft: '10px'
+
     },
 
 
@@ -339,7 +376,7 @@ interface Props{
     title: string;
 }
 
-export const WhereWeWork = ( props:Props) => {
+export const ContactUS = ( props:Props) => {
     const classes = useStyles();
     return (
         <div>
@@ -381,111 +418,54 @@ export const WhereWeWork = ( props:Props) => {
                                 
                                 <div className={classes.c_sidenav_content}>
                                     <div style={{ borderBottom: '1px solid white', paddingTop:'5%' }} className={classes.career_text}>
-                                        <h3>WHERE WE WORK</h3>
+                                        <h3>CONTACT US</h3>
                                     </div>
                                     <div className={classes.career_text}>
-                                        <h4>United States</h4>
+                                        <p>Directions/Parking</p> 
                                     </div>
                                     <div className={classes.career_text}>
-                                        <h4>International</h4>
+                                        <p>Career Opportunities</p>
                                     </div>
                                     
                                     <div>
-                                        <img className={classes.side_img} src={man_thinking} alt="man sitting at desk"/>
+                                        <img className={classes.side_img} src={paper} alt="stack of papers"/>  
                                     </div>
 
                                     <div className={classes.career_text}>
-                                        <h4>Career Opportunities</h4>
+                                        <h4>News & Events</h4>
                                     </div>
                                     <div className={classes.career_text}>
-                                        <h4>Join our magnificent firm.</h4>
+                                        <p>Join our magnificent firm and do more stuff with us.</p> 
                                     </div>  
                                 </div>    
                             </nav>
-                            <div className={classes.location_text}>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ornare pretium nulla, 
-                                    at rutrum urna consectetur sed. Cras ultricies efficitur magna, eu congue urna sodales 
-                                    eget. Aenean id purus quis enim scelerisque tempus id a metus. Nunc vitae luctus leo. 
-                                    Morbi eget malesuada purus. Nam a faucibus massa, et blandit leo. Etiam rutrum ante mi, 
-                                    vel mattis justo dignissim vel. Curabitur nisi magna, finibus in vehicula et, malesuada 
-                                    facilisis tellus. Suspendisse imperdiet non nulla sit.  
-                                </p>
-                                
-                            </div>
+                            
                             <div className={classes.test}>
+                                <div>
+                                    <img className={classes.contact_img} src={contact_pic} alt="photo that says contact"/> 
+                                    <div style={{ paddingLeft:'7%', paddingTop:'5%', fontSize:'14px'  }} >
+                                        <p style={{ paddingBottom:'5%' }}>The office houts are 8am - 5pm Monday through Friday</p>
+                                        <p>689 East South Street</p>
+                                        <p>Suite 4210</p>
+                                        <p  style={{ paddingBottom:'5%' }}>Houston, Texas 09324</p>
+                                        <p >PH: 555-555-5555</p>
+                                        <p  style={{ paddingBottom:'5%' }}>FAZ: 555-555-5555</p>
+                                        <p >Contact Rosmary Sage at <a  style={{ color:'blue' }}href="">rosmary@lawfirm.com</a></p>
 
+                                    </div> 
+                                 </div>
+
+                            <div className={classes.c_sidenav2}>
+                                <img className={classes.map_img} src={contact_where} alt="photo of map"/> 
+                                <div className={classes.c_sidenav_content2}>
+                                    <h3>Where We Work</h3>
+                                    <p>Find out more about our work coverage area.</p> 
+                                </div>
+                                <img className={classes.map_img} src={group} alt="photo of map"/> 
+                                <p className={classes.c_sidenav_content2} >Join our magnificent firm and do more stuff with us.</p> 
+                            </div>
                             
-                            <div className={classes.location_headings}>
-
-                                <p>United States </p> 
-                            </div>
-                            <div className={classes.location_headings2}>
-                                    <p>International</p>
-                            </div>
-                                
-                            {/* <div id="location-grid" className={classes.location_grid}></div>
-                            </div>
-                             */}
-                            </div>
-                                
-                                
-                            
-                            <div  className={classes.states_grid}>
-                             
-                                <p>State</p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p>Canada</p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p>Columbia</p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p>Germany</p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p>Nicaragua</p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p></p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p></p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p></p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p></p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p></p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p></p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p></p>
-                                <p></p>
-                                <p>State</p>
-                                <p>State</p>
-                                <p></p>
-                                <p></p>
-                                <p>State</p>
-                                <p>State</p>
-                                
-
-                    </div>
+                            </div>    
                     </div>
 
                         
@@ -507,3 +487,4 @@ export const WhereWeWork = ( props:Props) => {
         
     )
 }
+
