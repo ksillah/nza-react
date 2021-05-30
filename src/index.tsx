@@ -1,12 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { WhoWeAre } from './components'; //NEW_ADDITION
+import { WhoWeAre, WhereWeWork } from './components'; //NEW_ADDITION
 import reportWebVitals from './reportWebVitals';
+
 import './styles.css'
 
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 ReactDOM.render(
   <React.StrictMode>
-    <WhoWeAre title={'NZA'}/> {/* NEW_ADDITION*/}
+    <Router>
+      <Switch>
+        <Route exact path='/'>
+          <WhoWeAre title={'NZA'}/> {/* NEW_ADDITION*/}
+        </Route>
+        <Route path='/wherewework' component={WhereWeWork}/>
+      </Switch>
+    </Router>
+    
   </React.StrictMode>,
   document.getElementById('root')
 );

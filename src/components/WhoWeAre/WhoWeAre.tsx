@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core';
 import for_img from '../../assets/images/forward_thinking.jpg';
 import nza_back from '../../assets/images/nza_background.jpg';
+import {Link} from 'react-router-dom';
 
 interface Props{
     title: string;
@@ -283,15 +284,15 @@ export const WhoWeAre = ( props:Props) => {
                         
                             <div className={classes.id_nav}>
                                 <ul className={classes.id_nav_ul}>
-                                    <li className={classes.id_nav_ul_li}><a className={classes.id_nav_ul_li_a} href="who_we_are.html">WHO WE ARE</a> </li>
+                                    <li className={classes.id_nav_ul_li}><Link to='/' className={classes.id_nav_ul_li_a}>WHO WE ARE</Link> </li>
                                     <li className={classes.id_nav_ul_li}><span id="vertline1">I</span></li>
-                                    <li className={classes.id_nav_ul_li}><a className={classes.id_nav_ul_li_a} href="../what_we_do/what_we_do.html">WHAT WE DO</a></li>
+                                    <li className={classes.id_nav_ul_li}><Link to='/whatwedo' className={classes.id_nav_ul_li_a}>WHAT WE DO</Link></li> 
                                     <li className={classes.id_nav_ul_li}><span id="vertline2">I</span></li>
                                     <li className={classes.id_nav_ul_li}><a className={classes.id_nav_ul_li_a} href="#">NEWS and EVENTS</a></li>
                                     <li className={classes.id_nav_ul_li}><span id="vertline3">I</span></li>
-                                    <li className={classes.id_nav_ul_li}><a className={classes.id_nav_ul_li_a} href="../Where_We_Work/where_we_work.tsx" >WHERE WE WORK</a></li>
+                                    <li className={classes.id_nav_ul_li}><Link to='/wherewework' className={classes.id_nav_ul_li_a}>WHERE WE WORK</Link></li>
                                     <li className={classes.id_nav_ul_li}><span id="vertline4">I</span></li>
-                                    <li className={classes.id_nav_ul_li}><a className={classes.id_nav_ul_li_a} href="../contact_us/contact_us.html">CONTACT US</a></li>
+                                    <li className={classes.id_nav_ul_li}><Link to='/contact' className={classes.id_nav_ul_li_a}>CONTACT US</Link></li>
                                 </ul>
                             </div>
 

@@ -1,8 +1,10 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core';
+import { colors, makeStyles } from '@material-ui/core';
 
 import for_img from '../../assets/images/forward_thinking.jpg';
 import nza_back from '../../assets/images/nza_background.jpg';
+import {Link} from 'react-router-dom';
+import man_thinking from '../../assets/images/man_thinking.jpg'
 
 
 const useStyles = makeStyles({
@@ -70,13 +72,14 @@ const useStyles = makeStyles({
     },
 
     c_sidenav:{
-        width: '160px',
+        width: '230px',
         height: '348px',
         marginTop:'1%',
-        marginRight:'5%',
-        float:'right',
+        marginLeft:'3%',
+        float:'left',
         background: 'linear-gradient(to bottom, #AD0000 0%, #6E0000 100%)',
-        overflowX: 'hidden'
+        overflowX: 'hidden',
+        color:'white'
     },
     
     h3:{
@@ -109,6 +112,14 @@ const useStyles = makeStyles({
         color: '#eee',
         display: 'block'
       },
+
+    c_sidenav_content: {
+        display: 'block',
+        borderTop: '1px solid white',
+        marginRight: '20px'
+    },
+      
+
     c_div_img:{
         margintop: '-10px', 
         marginbottom: '5px'
@@ -249,12 +260,76 @@ const useStyles = makeStyles({
       marginTop: '155px',
       color: 'gray',
     },
+    side_img :{
+        height: '120px',
+        marginLeft: '5%',
+        marginTop: '5%'
+    },
+    career_text: {
+        paddingTop:'10px',
+        textDecoration: 'none',
+        color: 'white',
+        marginLeft: '5%'
+    },
     
     id_vertline4 :{
       float: 'left',
       marginTop: '155px',
       color: 'gray'
-    }
+    },
+    location_text: {
+        marginLeft: '27%',
+        marginRight:'5%',
+        marginTop: '10px'
+    },
+    // location_grid:{
+    //     display: 'grid',
+    //     gridTemplateColumns: '25% 25% 25% 25%',
+    //     gridTemplateRows: 'auto',
+    //     gridTemplateAreas: 
+    //     `"heading heading heading heading2"
+    //     "text text text text"`,
+    //     height: '150px',
+    //     boxsizing: 'border-box',
+    //     marginLeft: '3%'
+    // },
+    states_grid: {
+        marginTop:'10px',
+        marginRight: '15%',
+        marginBottom: '92px',
+        paddingLeft: '25px', 
+
+
+        display: 'grid',
+        gridGap:'10px',
+        gridTemplateColumns: '30% 30% 30% 10%',
+        gridTemplateRows: 'auto',
+        lineHeight: '14px'
+        
+    },
+    location_headings: {
+        gridArea: 'heading',
+        fontWeight: 'bold',
+        borderBottom: '2px solid gray',
+        marginLeft: '3%',
+        marginTop:'8px',
+        width:'85%',
+        height: '20px'
+    },
+    location_headings2: {
+        gridArea: 'heading2',
+        fontWeight: 'bold',
+        borderBottom: '2px solid gray',
+        marginRight: '10%',
+        marginTop:'8px',
+        width:'15%',
+        height: '20px'
+        
+    },
+    test:{
+        display:'flex'
+    },
+
 
 });
 
@@ -285,52 +360,139 @@ export const WhereWeWork = ( props:Props) => {
                         
                             <div className={classes.id_nav}>
                                 <ul className={classes.id_nav_ul}>
-                                    <li className={classes.id_nav_ul_li}><a className={classes.id_nav_ul_li_a} href="who_we_are.html">WHO WE ARE</a> </li>
+                                    <li className={classes.id_nav_ul_li}><Link to='/' className={classes.id_nav_ul_li_a}>WHO WE ARE</Link> </li>
                                     <li className={classes.id_nav_ul_li}><span id="vertline1">I</span></li>
-                                    <li className={classes.id_nav_ul_li}><a className={classes.id_nav_ul_li_a} href="../what_we_do/what_we_do.html">WHAT WE DO</a></li>
+                                    <li className={classes.id_nav_ul_li}><Link to='/whatwedo' className={classes.id_nav_ul_li_a}>WHAT WE DO</Link></li> 
                                     <li className={classes.id_nav_ul_li}><span id="vertline2">I</span></li>
                                     <li className={classes.id_nav_ul_li}><a className={classes.id_nav_ul_li_a} href="#">NEWS and EVENTS</a></li>
                                     <li className={classes.id_nav_ul_li}><span id="vertline3">I</span></li>
-                                    <li className={classes.id_nav_ul_li}><a className={classes.id_nav_ul_li_a} href="../Where_We_Work/where_we_work.tsx" >WHERE WE WORK</a></li>
+                                    <li className={classes.id_nav_ul_li}><Link to='/wherewework' className={classes.id_nav_ul_li_a}>WHERE WE WORK</Link></li>
                                     <li className={classes.id_nav_ul_li}><span id="vertline4">I</span></li>
-                                    <li className={classes.id_nav_ul_li}><a className={classes.id_nav_ul_li_a} href="../contact_us/contact_us.html">CONTACT US</a></li>
+                                    <li className={classes.id_nav_ul_li}><Link to='/contact' className={classes.id_nav_ul_li_a}>CONTACT US</Link></li>
                                 </ul>
                             </div>
 
                         <div className={classes.c_line_1}></div>
                         <div className={classes.c_line_2}></div>
-                        {/* <!-- Who We Are Body--> */}
+                        {/* <!-- Where we work--> */}
 
                         
-                        <div className={classes.id_who_we_are}>
                             <nav className={classes.c_sidenav}>
-                                <h3>Newsfeed</h3>
+                                
+                                <div className={classes.c_sidenav_content}>
+                                    <div style={{ borderBottom: '1px solid white', paddingTop:'5%' }} className={classes.career_text}>
+                                        <h3>WHERE WE WORK</h3>
+                                    </div>
+                                    <div className={classes.career_text}>
+                                        <h4>United States</h4>
+                                    </div>
+                                    <div className={classes.career_text}>
+                                        <h4>International</h4>
+                                    </div>
+                                    
                                     <div>
-                                        <h5 className={classes.h5}>Category</h5>
-                                        <div>
-                                            <a href="#">Link</a>
-                                        </div>
-                                        <p className={classes.id_sb_text}>Nostrum website salvete! Hoc septimana I ad sectionem welcom volutpat vestibulum project 
-                                            coding in templo. Hic est, qui sumus in thext pagina. Et hoc est exemplum in textu.</p>
-                                        <h5 className={classes.h5}>Footnotes</h5>
-                                        <a href="#">Linkable Subtext</a>
-                                    </div>    
+                                        <img className={classes.side_img} src={man_thinking} alt="man sitting at desk"/>
+                                    </div>
+
+                                    <div className={classes.career_text}>
+                                        <h4>Career Opportunities</h4>
+                                    </div>
+                                    <div className={classes.career_text}>
+                                        <h4>Join our magnificent firm.</h4>
+                                    </div>  
+                                </div>    
                             </nav>
-                            
-                            <div>
-                                <h1>jfjfslkm;sd</h1>
-                            </div> 
-                            
-                            <div className={classes.c_contact_info}>
-                                <h5 className={classes.id_who_we_are_header2}>Bigshot, Zoo, & Adds, P.C.</h5>
-                                <p className={classes.id_who_we_are_text2} > 419 West South Street, Suite 4200
-                                    <br/> Houston, Texas 35983 
-                                    <br/> 555-555-5555 (Phone) 
-                                    <br/> 555-555-5555 (Fax) 
+                            <div className={classes.location_text}>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ornare pretium nulla, 
+                                    at rutrum urna consectetur sed. Cras ultricies efficitur magna, eu congue urna sodales 
+                                    eget. Aenean id purus quis enim scelerisque tempus id a metus. Nunc vitae luctus leo. 
+                                    Morbi eget malesuada purus. Nam a faucibus massa, et blandit leo. Etiam rutrum ante mi, 
+                                    vel mattis justo dignissim vel. Curabitur nisi magna, finibus in vehicula et, malesuada 
+                                    facilisis tellus. Suspendisse imperdiet non nulla sit.  
                                 </p>
-                            </div> 
-                        </div>
+                                
+                            </div>
+                            <div className={classes.test}>
+
+                            
+                            <div className={classes.location_headings}>
+
+                                <p>United States </p> 
+                            </div>
+                            <div className={classes.location_headings2}>
+                                    <p>International</p>
+                            </div>
+                                
+                            {/* <div id="location-grid" className={classes.location_grid}></div>
+                            </div>
+                             */}
+                            </div>
+                                
+                                
+                            
+                            <div  className={classes.states_grid}>
+                             
+                                <p>State</p>
+                                <p>State</p>
+                                <p>State</p>
+                                <p>Canada</p>
+                                <p>State</p>
+                                <p>State</p>
+                                <p>State</p>
+                                <p>Columbia</p>
+                                <p>State</p>
+                                <p>State</p>
+                                <p>State</p>
+                                <p>Germany</p>
+                                <p>State</p>
+                                <p>State</p>
+                                <p>State</p>
+                                <p>Nicaragua</p>
+                                <p>State</p>
+                                <p>State</p>
+                                <p>State</p>
+                                <p></p>
+                                <p>State</p>
+                                <p>State</p>
+                                <p>State</p>
+                                <p></p>
+                                <p>State</p>
+                                <p>State</p>
+                                <p>State</p>
+                                <p></p>
+                                <p>State</p>
+                                <p>State</p>
+                                <p>State</p>
+                                <p></p>
+                                <p>State</p>
+                                <p>State</p>
+                                <p>State</p>
+                                <p></p>
+                                <p>State</p>
+                                <p>State</p>
+                                <p>State</p>
+                                <p></p>
+                                <p>State</p>
+                                <p>State</p>
+                                <p></p>
+                                <p></p>
+                                <p>State</p>
+                                <p>State</p>
+                                <p></p>
+                                <p></p>
+                                <p>State</p>
+                                <p>State</p>
+                                
+
                     </div>
+                    </div>
+
+                        
+                            
+                            
+                        
+                    
                     <div className={classes.c_footer} >
                         <a className={classes.id_footer_link} href="who_we_are.html" >WHO WE ARE</a>
                         <a className={classes.id_footer_link} href="../what_we_do/what_we_do.html" >WHAT WE DO</a>
