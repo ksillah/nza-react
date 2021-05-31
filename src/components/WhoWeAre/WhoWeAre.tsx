@@ -17,7 +17,6 @@ const useStyles = makeStyles({
         width: '100%',
         height:"100%" 
     },
-    
     container: {
         marginLeft: '15%',
         marginRight: 'auto', /*changed from 0 to fit screen*/
@@ -31,8 +30,9 @@ const useStyles = makeStyles({
         width: '70%',
         height:"100%"   
     },   
-    firm_logo: {
-        margintop: '5%',
+    logo: {
+        paddingTop: '15px',
+        marginLeft: '5%',
         textAlign:'left',
     },
     button: {
@@ -45,7 +45,6 @@ const useStyles = makeStyles({
         float: 'right',
         marginRight: '5%'
     },
-
     sidebar:{
         width: '230px',
         height: '348px',
@@ -56,7 +55,6 @@ const useStyles = makeStyles({
         overflowX: 'hidden',
         color:'white'
     },
-    
     h5:{
         padding: '0px 0px 0px 20px',
         marginBottom: '1px',
@@ -185,12 +183,11 @@ export const WhoWeAre = ( props:Props) => {
                 <div className={classes.
                     container}>
                     <div>
-                        <span>
-                            <div className={classes.firm_logo}>
-                                <img id="image" src="http://via.placeholder.com/300x100" alt="law firm logo"/>
+                    <span>
+                            <div>
+                                <img className={classes.logo} src="http://via.placeholder.com/300x100" alt="law firm logo"/>
                                 <button className={classes.button}>Log in</button>
                             </div>
-                            
                         </span>
                         {/* <!--Header--> */}
                         
